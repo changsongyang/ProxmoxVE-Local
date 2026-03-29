@@ -41,6 +41,7 @@ function pbToScript(pb: PBScript): Script {
       script: m.script,
       resources: m.resources,
       config_path: m.config_path,
+      script: scriptDownloaderService.deriveScriptPath(pb.type, m.type, pb.slug) ?? undefined,
     })),
     default_credentials: {
       username: pb.default_user,
